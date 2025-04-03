@@ -1,63 +1,130 @@
 <!doctype html>
+<html lang="en">
 
-<head> 
-    <script src = "C:\Users\Dhrona Chandra\Downloads\Portfolio\js.js"></script>
-    <link rel = "stylesheet" href = "cssstyle.css">
-    <title>Portfolio</title>
-    
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="cssstyle.css">
+    <title>Dhrona Chandra - Portfolio</title>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-    
-    <div>
-        <div class = "home">
-           <!--h1 class = "Heading">My Portfolio</h1-->
-            <h2 class = "name"> DHRONA CHANDRA VOGOTI<br>
-            <n3 class = "slogan">An Enthusiastic personality</h3></h2>
-            
-            <div class = "buttons">
-                <button id = "b1" class = "b1">About</button>
-                <button id = "b2" class = "b2" >Summary</button>
-                <button id = "b3" class = "b3">Skills</button>
-                <button id = "b4" class = "b4">Projects</button>
-                <button id = "b5" class = "b5">Contact</button>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="home">
+            <button id="theme-toggle" class="btn theme-btn">🌓</button>
+            <h1 class="heading">Dhrona Chandra Vogoti</h1>
+            <h2 class="slogan">AI-ML Undergraduate | Full-Stack Developer</h2>
+
+            <div class="buttons">
+                <button class="btn" id="b1">About</button>
+                <button class="btn" id="b2">Experience</button>
+                <button class="btn" id="b3">Skills</button>
+                <button class="btn" id="b4">Projects</button>
+                <button class="btn" id="b5">Contact</button>
             </div>
         </div>
-        <div class = "head">
-            <h1 class = "welcome">WELCOME TO MY PORTFOLIO</h1>
-        </div>        
-        <div class = "subheadings">
-            <div id = "a" class = "about_head">
-                <h3 >About</h3>
-                 <p class = "about">Name: Dhrona Chandra Vogoti<br>D.O.B: 09-07-2004<br>Occupation: 2nd Year B.tech Student<br>College name : Sreenidhi Institute of Science & Technology (Hyderabad) </p>
-            </div>
-            <div id = "su">
-                <h3 >Summary</h3>
-                    <p class = "summary">An Enthusiastic Student, currently persuing B.tech in "Aritficial Intelligence & machine learning" as 2nd year, Just started his journey! </p>
-            </div>
-            <div id = "sk">        
-                <h3 >Skills</h3>
-                    <p class = "skills">HTML, CSS, JAVA, PYTHON, C++, C.</p>
-            </div>
-            <div id = "p">
-                    <h3 >Projects</h3>
-                    <p class = "projects">1. Smart-India Hackathon: <br> a. solved a problem of getting aware of an Individual body type<br>b.Build a chat-bot using PYTHON & REACT<br>c. Won bronze medal for the idea & innovation </p>
-            </div>
-            <div id = "c">
-                    <h4 >Contact</h4>
-                    <p class = "contact">Gmail Id: dhronachandra@gmail.com
-            </div>
-                        <br>LinkedIn Id: www.linkedin.com/dhrona007<br>Phone No: +91 7569338994</p>
 
+        <div class="content-section">
+            <section id="about">
+                <h2>Profile Summary</h2>
+                <p class="summary">AI-ML undergraduate with expertise in Python, machine learning, and full-stack
+                    development. Awarded a Bronze Medal at INEX India Expo 2023 for developing a health assessment
+                    chatbot. Passionate about leveraging AI to solve real-world problems.</p>
+
+                <h3>Education</h3>
+                <div class="education">
+                    <h4>Sreenidhi Institute of Science and Technology</h4>
+                    <p>B.Tech in Computer Science with AI & ML (2022-2026)<br>
+                        CGPA: 8.0<br>
+                        Relevant Coursework: Machine Learning, Data Structures, Database Systems, Web Development</p>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                <div class="experience-item">
+                    <h4>AI-ML Undergraduate</h4>
+                    <p>Sreenidhi Institute of Science & Technology (Nov 2022 - Present)</p>
+                    <ul>
+                        <li>Led 4-member team to develop AI mental health chatbot (Flask, Python, JavaScript)</li>
+                        <li>Earned certifications in website development from NXT Wave</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div>
+                        <h4>Programming</h4>
+                        <ul>
+                            <li>Python, Java, C/C++</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Web Development</h4>
+                        <ul>
+                            <li>HTML/CSS/JavaScript</li>
+                            <li>Node.js, Express.js, Flask</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Databases</h4>
+                        <ul>
+                            <li>MySQL, MongoDB</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Project Gallery</h2>
+
+                <!-- Filter Controls -->
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI/ML</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="project-grid">
+                    <!-- Project cards will be dynamically inserted here -->
+                </div>
+
+                <!-- Project Modal -->
+                <div class="project-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <img class="modal-image" src="" alt="">
+                        <h3 class="modal-title"></h3>
+                        <div class="modal-tech"></div>
+                        <p class="modal-description"></p>
+                        <div class="modal-links"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <p>📧 dhronachandra@gmail.com<br>
+                        📱 +91 9121065306<br>
+                        🔗 <a href="https://linkedin.com/in/dhrona007">LinkedIn</a><br>
+                        🐙 <a href="https://github.com/dhrona007">GitHub</a></p>
+                </div>
+            </section>
         </div>
     </div>
-    
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js.js"></script>
 </body>
 
-<!--https://www.pngall.com/wp-content/uploads/2016/05/Man-PNG-Image.png
-https://www.pngmart.com/files/7/Guy-PNG-Photos.png
-https://i.pinimg.com/originals/56/7b/5c/567b5c424fa02c1d9fbf1e37e8458e68.png
--->
 </html>
